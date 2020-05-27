@@ -161,6 +161,7 @@ class DocType(DSLDocument):
             '_op_type': action,
             '_index': self._index._name,
             '_id': object_instance.pk,
+            '_type': self._doc_type.name,
             '_source': (
                 self.prepare(object_instance) if action != 'delete' else None
             ),
